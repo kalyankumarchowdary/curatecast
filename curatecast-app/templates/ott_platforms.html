@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #141414, #1f1f1f); /* Dark gradient background */
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .header {
+            font-size: 4em;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5); /* Futuristic glow effect */
+            margin-bottom: 20px;
+        }
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+        .tab a {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            text-decoration: none;
+            color: black;
+        }
+        .tab a:hover {
+            background-color: #ddd;
+        }
+        .tab a.active {
+            background-color: #ccc;
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+        .platform img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .button {
+            background: linear-gradient(90deg, #00a8e1, #007ba7); /* Gradient background */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px; /* More rounded button */
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: background 0.3s ease; /* Smooth transition */
+        }
+        .button:hover {
+            background: linear-gradient(90deg, #007ba7, #005f73); /* Darker gradient on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">OTT Platforms</div>
+    <div class="tab">
+        {% for platform in platforms %}
+        <a href="{{ platform.url }}" target="_blank" class="tablinks">{{ platform.name }}</a>
+        {% endfor %}
+    </div>
+
+    {% for platform in platforms %}
+    <div id="{{ platform.name }}" class="tabcontent">
+        <div class="platform">
+            <img src="{{ platform.logo }}" alt="{{ platform.name }} logo">
+            <h2>{{ platform.name }}</h2>
+            <p>{{ platform.description }}</p>
+        </div>
+    </div>
+    {% endfor %}
+
+    <a href="/" class="button">Back to Home</a>
+</body>
+</html>

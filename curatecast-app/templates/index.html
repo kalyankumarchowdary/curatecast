@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #141414, #1f1f1f); /* Dark gradient background */
+            color: white;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .header {
+            font-size: 4em;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5); /* Futuristic glow effect */
+            margin-bottom: 20px;
+        }
+        .curate {
+            font-style: italic; /* Italic style for "Curate" */
+            color: #00ffcc; /* Neon cyan color */
+        }
+        .cast {
+            color: #00a8e1; /* Blue color for "Cast" */
+            background: white; /* White background */
+            border-radius: 50%; /* Round background */
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        .content {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .button {
+            background: linear-gradient(90deg, #00a8e1, #007ba7); /* Gradient background */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px; /* More rounded button */
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: background 0.3s ease; /* Smooth transition */
+        }
+        .button:hover {
+            background: linear-gradient(90deg, #007ba7, #005f73); /* Darker gradient on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="curate">Curate</span><span class="cast">Cast</span>
+    </div>
+    <div class="content">
+        <p>Welcome to CurateCast, your ultimate OTT platform for curated content. Enjoy a seamless streaming experience with our vast library of movies, TV shows, and exclusive originals.</p>
+        <a href="/ott-platforms" class="button">Start Watching</a>
+    </div>
+</body>
+</html>
